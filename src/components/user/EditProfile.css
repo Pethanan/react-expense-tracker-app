@@ -1,0 +1,6 @@
+.edit-form {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 1rem 0rem;
+  row-gap: 2rem;
+}

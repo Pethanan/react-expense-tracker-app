@@ -1,0 +1,80 @@
+.signup-form-container {
+  width: 600px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: 0 auto;
+  margin-top: 200px;
+  font-weight: bold;
+  color: azure;
+}
+
+.signup-submit-btn {
+  background-color: rgb(213, 219, 236);
+  border-radius: 6px;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  width: 140px;
+  padding: 8px 20px;
+  color: rgb(13, 13, 124);
+  font-weight: 700;
+}
+
+.signup-submit-btn:hover {
+  color: rgb(106, 124, 172);
+  background-color: rgb(5, 5, 73);
+  color: azure;
+  transform: scale(1.05);
+}
+
+.btnrow {
+  justify-content: center;
+  margin-top: 50px;
+  padding: 8px 10px;
+  display: flex;
+}
+
+.form-elements {
+  margin-bottom: 35px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.login-link {
+  text-align: center;
+}
+
+.login-link-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 25px 15px;
+  margin: 80px 0;
+  background-color: rgb(144, 144, 228);
+  transform: translateX(50%);
+  border-radius: 10px;
+  color: white;
+}
+
+.login-redirect {
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.login-redirect:hover {
+  background-color: rgb(84, 84, 116);
+  color: white;
+  border-radius: 8px;
+}
+.login-link a {
+  color: black;
+}
+.login-link a:hover {
+  color: rgb(7, 5, 151);
+}

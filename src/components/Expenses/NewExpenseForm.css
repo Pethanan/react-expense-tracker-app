@@ -1,0 +1,75 @@
+.new-expense__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.new-expense__control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.new-expense__control input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+}
+
+.new-expense__actions {
+  text-align: right;
+}
+
+.add-expense-enable-btn {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: 1px solid #00215d;
+  background-color: #021752;
+  color: rgb(227, 228, 233);
+  border-radius: 12px;
+  margin-right: 1rem;
+}
+.new-expense {
+  background-color: #92baee;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+}
+
+.new-expense--btn {
+  font: inherit;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #021752;
+  color: rgb(227, 228, 233);
+  border-radius: 12px;
+  margin-right: 1rem;
+  margin-top: 30px;
+}
+
+.new-expense--btn.cancel {
+  background-color: rgb(227, 228, 233);
+  color: #021752;
+}
+.new-expense button:hover,
+.new-expense button:active {
+  background-color: #061774;
+  border-color: #f8f8f8;
+}
+
+.new-expense button.alternative {
+  color: #220131;
+  border-color: transparent;
+  background-color: transparent;
+}

@@ -1,0 +1,31 @@
+.chart-container {
+  transform: translateY(50%);
+  border-radius: 8px;
+  background-color: rgb(74, 104, 165);
+  padding: 2rem;
+}
+
+.chart {
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: #f8dfff;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  height: 10rem;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+}
+
+.header-container header {
+  background-color: #f8dfff;
+  color: rgb(2, 12, 32);
+  padding: 1rem 2rem;
+  font-size: large;
+  font-weight: 800;
+  border: none;
+  border-radius: 4px;
+}

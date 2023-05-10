@@ -1,0 +1,33 @@
+.menu-icon--container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+* {
+  background-color: black;
+}
+.menu-icon--container span {
+  padding: 0;
+  margin: 0;
+}
+
+.menu-icon {
+  display: inline;
+  width: 20px;
+  height: auto;
+}
+
+.iconItem {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+}
+.sidebar {
+  transform: translateX(100%);
+  transition: all 0.04s;
+}
+
+.sidebar.sidebar--open {
+  transform: translateX(0%);
+}
