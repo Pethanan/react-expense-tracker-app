@@ -33,7 +33,9 @@ const EmailVerification = () => {
     );
     const fetchedData = postMailVerificationStatus.data;
 
-    dispatch(authSliceActions.emailVerifiedUpdate(true));
+    if (fetchedData) {
+      dispatch(authSliceActions.emailVerifiedUpdate(true));
+    }
   };
 
   return (

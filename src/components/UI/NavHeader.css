@@ -1,13 +1,14 @@
-.darkmode {
-  background-color: azure;
-  color: black;
+.navheader.darkmode {
+  background-color: black;
+  color: rgb(165, 140, 197);
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
   padding: 15px 50px;
+  border: 1px solid white;
 }
 
-.nodarkmode {
+.navheader {
   padding: 15px 50px;
   background-color: rgb(5, 5, 77);
   color: azure;
@@ -15,6 +16,7 @@
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
+  font-size: 22px;
 }
 
 .nav-link {

@@ -40,11 +40,17 @@ import { createSlice } from "@reduxjs/toolkit";
 // };
 
 // export default AuthCtx;
+const initialToken = localStorage.getItem("token");
+const userMail = localStorage.getItem("mailId");
+const userName = localStorage.getItem("userName");
+const premiumMode = localStorage.getItem("premiumMode");
+const userURL = localStorage.getItem("userURL");
+const mailVerified = localStorage.getItem("mailVerified");
 
 const initialAuthState = {
-  isLoggedIn: false,
-  authToken: null,
-  userMail: "",
+  authToken: initialToken,
+  isLoggedIn: !!initialToken,
+  userMail: userMail,
   mailVerified: false,
   userName: "",
   userURL: "",
@@ -63,9 +69,12 @@ const authSlice = createSlice({
     logout(state) {
       state.isLoggedIn = false;
       state.authToken = null;
+      state.userName = null;
+      state.userURL = null;
+      state.mailVerified = null;
+      state.premiumMode = false;
     },
     editUserDetails(state, action) {
-      state.mailVerified = action.payload.mailVerified;
       state.userName = action.payload.userName;
       state.userURL = action.payload.userURL;
     },

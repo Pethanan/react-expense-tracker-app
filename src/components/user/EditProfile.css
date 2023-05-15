@@ -1,6 +1,12 @@
 .edit-form {
   display: grid;
   grid-template-columns: auto auto;
-  padding: 1rem 0rem;
+  padding: 1rem 1rem;
+  border-radius: 5px;
   row-gap: 2rem;
+}
+
+.edit-form--container {
+  position: relative;
+  left: 0%;
 }

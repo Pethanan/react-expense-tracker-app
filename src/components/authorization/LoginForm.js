@@ -35,6 +35,9 @@ const LoginForm = () => {
 
     if (isLoggedin) {
       console.log(authData.idToken);
+      localStorage.setItem("token", authData.idToken);
+      localStorage.setItem("mailId", enteredMailId);
+
       alert("Login succesful!");
       const loginPayload = { token: authData.idToken, userMail: enteredMailId };
       dispatch(authSliceActions.login(loginPayload));

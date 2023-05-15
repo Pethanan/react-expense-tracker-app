@@ -4,10 +4,14 @@ import Layout from "../UI/Layout";
 
 const ExpensesAnalysisPage = () => {
   return (
-    <>
+    <div
+      style={{
+        height: "100vh",
+      }}
+    >
       <Layout></Layout>
       <Chart />
-    </>
+    </div>
   );
 };
 

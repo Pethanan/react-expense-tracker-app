@@ -1,14 +1,29 @@
 .user-info--container-out {
-  margin: 5%;
+  margin: 2rem 0;
+  position: relative;
+  left: 20%;
+}
+
+.info-container {
+  position: relative;
+  left: 100px;
+}
+.info-container.dark-mode {
+  background-color: rgb(24, 28, 32);
 }
 
 .user-info--container-out.edit {
-  margin: 5%;
+  margin: 2rem 0;
+  position: relative;
+  left: 20%;
+  color: rgb(160, 160, 179);
+  font-weight: 700;
 }
 
 .user-info--container-out button,
 .user-info--container-out button:active {
   width: 60%;
+
   border-radius: 10px;
   padding: 5px 6px;
   background-color: rgb(1, 1, 65);
@@ -24,13 +39,9 @@
 }
 
 .user-info--container {
-  width: 60%;
+  margin: 0;
   padding: 3rem 5rem;
   background-color: rgb(225, 225, 235);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: grid;
   grid-template-columns: auto auto;
   font-size: 18px;
@@ -38,18 +49,18 @@
   row-gap: 1rem;
   border: 1px solid rgba(3, 9, 48, 0.8);
   border-radius: 4px;
+  position: fixed;
 }
 
 .user-info--container.edit {
-  width: 60%;
+  width: 50vw;
   padding: 3rem 5rem;
   background-color: rgb(225, 225, 235);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  left: 0;
 }
 
 .user-info-item {

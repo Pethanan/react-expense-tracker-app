@@ -7,15 +7,16 @@ import "./NavHeader.css";
 
 const NavHeader = () => {
   const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
-
+  const darkmode = useSelector((state) => state.auth.premiumMode);
   const dispatch = useDispatch();
 
   const logoutHandler = () => {
     dispatch(authSliceActions.logout());
+    localStorage.clear();
   };
   return (
     <div>
-      <Nav className="nodarkmode">
+      <Nav className={`${!darkmode ? "navheader" : "navheader darkmode"}`}>
         <div>PETH expense tracker</div>
         <div style={{ display: "flex", justifyContent: "flex-start" }}>
           {!isLoggedIn && (

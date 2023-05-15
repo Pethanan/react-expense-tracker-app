@@ -2,6 +2,11 @@
   width: 100%;
 }
 
+.container-out {
+  width: 100%;
+  background-color: white;
+}
+
 .home-container {
   position: fixed;
   top: 100px;

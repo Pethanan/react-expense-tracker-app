@@ -9,9 +9,7 @@ const EditProfile = () => {
   const dispatch = useDispatch();
   const [editedInfo, setEditedInfo] = useState(false);
   const [userDetailsComplete, setUserDetailsComplete] = useState(null);
-  const isPremiumActivated = useSelector(
-    (state) => state.theme.isPremiumActivated
-  );
+  const isPremiumActivated = useSelector((state) => state.auth.premiumMode);
   const authToken = useSelector((state) => state.auth.authToken);
   console.log(authToken);
 
@@ -43,10 +41,11 @@ const EditProfile = () => {
     console.log(editedResponseData);
 
     const editPayload = {
-      mailVerified: editedResponseData.emailVerified,
-      userName: editedResponseData.displayName,
-      userURL: editedResponseData.photoUrl,
+      userName: enteredFullName,
+      userURL: enteredProfilePhotoURLRef,
     };
+
+    console.log(editPayload);
     dispatch(authSliceActions.editUserDetails(editPayload));
 
     profilePhotoURLRef.current.value = "";
@@ -55,7 +54,13 @@ const EditProfile = () => {
   };
 
   return (
-    <>
+    <div
+      className={`${
+        isPremiumActivated
+          ? "edit-form--container darkmode"
+          : "edit-form--container"
+      }`}
+    >
       <Form className="edit-form" onSubmit={editSubmitHandler}>
         <label>Full Name</label>
         <input type="text" ref={fullNameRef}></input>
@@ -63,7 +68,7 @@ const EditProfile = () => {
         <input type="text" ref={profilePhotoURLRef}></input>
         <button type="submit">Submit</button>
       </Form>
-    </>
+    </div>
   );
 };
 

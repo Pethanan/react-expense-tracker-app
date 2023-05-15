@@ -7,3 +7,16 @@
   max-width: 95%;
   border-radius: 6px;
 }
+
+h4 span {
+}
+.darkmode {
+  background-color: rgb(37, 34, 44);
+  margin: 0;
+}
+
+.footer-container.darkmode {
+  background-color: rgb(37, 34, 44);
+  height: 55vh;
+  color: rgb(214, 214, 228);
+}

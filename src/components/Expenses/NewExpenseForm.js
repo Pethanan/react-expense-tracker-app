@@ -10,6 +10,7 @@ import Modal from "../UI/Modal";
 
 const NewExpenseForm = () => {
   const [showModal, setShowModal] = useState(false);
+  const darkmode = useSelector((state) => state.auth.premiumMode);
 
   const dispatch = useDispatch();
   const userMail = useSelector((state) => state.auth.userMail);
@@ -42,9 +43,10 @@ const NewExpenseForm = () => {
       category: enteredItemCategory,
       date: enteredItemDate,
     };
-    console.log(URL);
-    console.log(expenseItem);
-    console.log(userDBEndpoint);
+    console.log(enteredItemDate);
+    console.log(enteredItemDate);
+    console.log(enteredItemDate);
+    console.log(enteredItemDate);
 
     const addExpenseResponse = await axios.post(`${URL}`, expenseItem);
     console.log(addExpenseResponse.data);
@@ -54,6 +56,10 @@ const NewExpenseForm = () => {
       amount: +enteredItemAmount,
     };
     console.log(addedItem);
+    console.log(addedItem);
+    console.log(addedItem);
+    console.log(addedItem);
+
     dispatch(expensesActions.addExpense(addedItem));
     setShowModal(true);
     setTimeout(() => {
@@ -66,7 +72,10 @@ const NewExpenseForm = () => {
   };
 
   return (
-    <>
+    <div
+      className={`${darkmode ? "darkmode" : ""}`}
+      style={{ marginTop: "3rem" }}
+    >
       <div className="new-expense">
         <button
           className="add-expense-enable-btn"
@@ -79,9 +88,23 @@ const NewExpenseForm = () => {
 
         {showExpenseForm && (
           <Form onSubmit={addExpenseHandler} style={{ width: "40%" }}>
-            <div className="new-expense__controls">
-              <div className="new-expense__control">
-                <Form.Label>Item Name</Form.Label>
+            <div
+              className={`${
+                darkmode
+                  ? "form new-expense__controls"
+                  : "new-expense__controls"
+              }`}
+            >
+              <div
+                className={`${
+                  darkmode
+                    ? "form new-expense__control"
+                    : "new-expense__control"
+                }`}
+              >
+                <Form.Label style={{ color: "rgb(227, 228, 233)" }}>
+                  Item Name
+                </Form.Label>
                 <Form.Control
                   placeholder="item name"
                   type="text"
@@ -89,8 +112,16 @@ const NewExpenseForm = () => {
                 />
               </div>
 
-              <div className="new-expense__control">
-                <Form.Label>Amount</Form.Label>
+              <div
+                className={`${
+                  darkmode
+                    ? "form new-expense__control"
+                    : "new-expense__control"
+                }`}
+              >
+                <Form.Label style={{ color: "rgb(227, 228, 233)" }}>
+                  Amount
+                </Form.Label>
                 <Form.Control
                   placeholder="0"
                   type="number"
@@ -98,8 +129,16 @@ const NewExpenseForm = () => {
                 />
               </div>
 
-              <div className="new-expense__control">
-                <Form.Label>Category</Form.Label>
+              <div
+                className={`${
+                  darkmode
+                    ? "form new-expense__control"
+                    : "new-expense__control"
+                }`}
+              >
+                <Form.Label style={{ color: "rgb(227, 228, 233)" }}>
+                  Category
+                </Form.Label>
                 <Form.Control
                   placeholder="category"
                   type="text"
@@ -108,7 +147,9 @@ const NewExpenseForm = () => {
               </div>
 
               <div className="new-expense__control">
-                <Form.Label>Date</Form.Label>
+                <Form.Label style={{ color: "rgb(227, 228, 233)" }}>
+                  Date
+                </Form.Label>
                 <Form.Control type="date" ref={itemDateRef} />
               </div>
 
@@ -116,7 +157,13 @@ const NewExpenseForm = () => {
                 <button className="new-expense--btn" type="submit">
                   Submit
                 </button>
-                <button className="new-expense--btn cancel" type="submit">
+                <button
+                  className="new-expense--btn cancel"
+                  type="submit"
+                  onClick={() => {
+                    setShowExpenseForm(false);
+                  }}
+                >
                   Cancel
                 </button>
               </div>
@@ -130,7 +177,7 @@ const NewExpenseForm = () => {
           displayContent="Expense Added successFully"
         />
       )}
-    </>
+    </div>
   );
 };
 
