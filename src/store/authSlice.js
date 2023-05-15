@@ -75,6 +75,7 @@ const authSlice = createSlice({
       state.premiumMode = false;
     },
     editUserDetails(state, action) {
+      state.mailVerified = action.payload.mailVerified;
       state.userName = action.payload.userName;
       state.userURL = action.payload.userURL;
     },

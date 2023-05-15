@@ -42,8 +42,10 @@ const UserInfoPage = () => {
         );
         const fetchedDetailsUsersData = await fetchedDetails.json();
         const usersData = fetchedDetailsUsersData.users[0];
-
+        console.log(usersData);
+        console.log(usersData);
         const editPayload = {
+          mailVerified: usersData.emailVerified,
           userName: usersData.displayName,
           userURL: usersData.photoUrl,
         };
